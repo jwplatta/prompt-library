@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bundle exec rspec:*)",
+      "Bash(bundle exec rubocop:*)",
+      "Bash(git checkout:*)"
+    ],
+    "deny": [],
+    "additionalDirectories": [
+      "/Users/jplatta/repos/schwab_rb",
+      "/Users/jplatta/repos/options_trader"
+    ]
+  }
+}
