@@ -3,12 +3,23 @@
     "allow": [
       "Bash(bundle exec rspec:*)",
       "Bash(bundle exec rubocop:*)",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "TodoWrite",
+      "WebFetch",
+      "WebSearch",
+      "Grep",
+      "Glob",
+      "LS",
+      "MultiEdit",
+      "Read",
+      "Task"
     ],
     "deny": [],
-    "additionalDirectories": [
-      "/Users/jplatta/repos/schwab_rb",
-      "/Users/jplatta/repos/options_trader"
-    ]
-  }
+    "additionalDirectories": []
+  },
+  "feedbackSurveyState": {
+    "lastShownTime": 1753980926936
+  },
+  "enableAllProjectMcpServers": true,
+  "model": "sonnet"
 }
