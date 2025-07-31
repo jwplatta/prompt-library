@@ -1,0 +1,1 @@
+Write a quote from Wittgenstein's Tractatus.
