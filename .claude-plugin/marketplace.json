@@ -7,7 +7,7 @@
   "plugins": [
     {
       "name": "template-plugin",
-      "source": "./plugins/template",
+      "source": "./claude/plugins/template",
       "description": "Template plugin for building Claude plugins",
       "version": "1.0.0",
       "author": {
