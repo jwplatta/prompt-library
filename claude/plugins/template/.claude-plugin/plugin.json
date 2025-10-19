@@ -11,6 +11,5 @@
   "repository": "https://github.com/jwplatta/prompt-library",
   "license": "MIT",
   "keywords": ["example"],
-  "commands": ["./custom/commands/special.md"],
   "mcpServers": "./mcp-config.json"
 }
