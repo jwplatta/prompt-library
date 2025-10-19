@@ -1,0 +1,18 @@
+{
+  "name": "template-plugin",
+  "version": "0.0.0",
+  "description": "A template plugin demonstrating all hook events in Claude Code",
+  "author": {
+    "name": "Joseph Platta",
+    "email": "jwplatta@gmail.com",
+    "url": "https://github.com/jwplatta/prompt-library"
+  },
+  "homepage": "https://github.com/jwplatta/prompt-library",
+  "repository": "https://github.com/jwplatta/prompt-library",
+  "license": "MIT",
+  "keywords": ["example"],
+  "commands": ["./custom/commands/special.md"],
+  "agents": "./custom/agents/",
+  "hooks": "./config/hooks.json",
+  "mcpServers": "./mcp-config.json"
+}

@@ -1,0 +1,125 @@
+{
+  "description": "Template hooks configuration for Claude Code plugins",
+
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'File edited: $TOOL_RESULT_FILE_PATH'"
+          }
+        ]
+      },
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "prettier --write \"$TOOL_RESULT_FILE_PATH\" || true"
+          }
+        ]
+      }
+    ],
+
+    "PreToolUse": [
+      {
+        "matcher": "Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'About to edit: $TOOL_INPUT_FILE_PATH'"
+          }
+        ]
+      }
+    ],
+
+    "UserPromptSubmit": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'User submitted prompt at $(date)' >> ~/.claude/prompt_log.txt"
+          }
+        ]
+      }
+    ],
+
+    "Notification": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osascript -e 'display notification \"Claude Code needs attention\" with title \"Claude Code\"'"
+          }
+        ]
+      }
+    ],
+
+    "Stop": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'Response completed' >> ~/.claude/activity.log"
+          }
+        ]
+      }
+    ],
+
+    "SessionStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'Session started at $(date)' >> ~/.claude/sessions.log"
+          }
+        ]
+      }
+    ],
+
+    "SessionEnd": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'Session ended at $(date)' >> ~/.claude/sessions.log"
+          }
+        ]
+      }
+    ]
+  },
+
+  "_comments": {
+    "usage": "This template demonstrates all available hook events in Claude Code",
+    "events": [
+      "PreToolUse - Executes before tool calls (can block them)",
+      "PostToolUse - Runs after tool calls complete",
+      "UserPromptSubmit - Triggers when users submit prompts",
+      "Notification - Fires when Claude sends notifications",
+      "Stop - Runs when Claude finishes responding",
+      "SubagentStop - Executes when subagent tasks complete",
+      "PreCompact - Runs before compaction operations",
+      "SessionStart - Triggers on new or resumed sessions",
+      "SessionEnd - Runs when sessions terminate"
+    ],
+    "matcher_options": [
+      "Use specific tool names like 'Edit', 'Write', 'Bash'",
+      "Use '*' to match all tools",
+      "Multiple matchers can be defined for the same event"
+    ],
+    "security_warning": "Hooks run automatically with your environment credentials. Always review hook implementations before registering them.",
+    "examples": {
+      "auto_format": "PostToolUse hook with prettier/gofmt for automatic code formatting",
+      "production_guard": "PreToolUse hook to block edits to production files",
+      "audit_logging": "Track all tool executions for compliance",
+      "custom_notifications": "Alert systems when Claude needs input"
+    }
+  }
+}
