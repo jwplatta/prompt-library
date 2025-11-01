@@ -29,6 +29,7 @@ cd "$PLUGIN_PATH"
 # Remove existing git history and initialize fresh
 rm -rf .git
 git init
+git branch -m master main
 
 # Update manifest.json
 echo "Updating manifest.json..."
