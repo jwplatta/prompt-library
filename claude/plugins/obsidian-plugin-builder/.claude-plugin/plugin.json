@@ -1,0 +1,12 @@
+{
+  "name": "obsidian-plugin-builder",
+  "description": "Plugin for building Obsidian plugins",
+  "version": "1.0.0",
+  "author": {
+    "name": "Joseph Platta"
+  },
+  "homepage": "https://github.com/jwplatta/prompt-library",
+  "repository": "https://github.com/jwplatta/prompt-library",
+  "license": "MIT",
+  "keywords": ["obsidian", "note-taking", "second-brain"]
+}
