@@ -1,0 +1,4 @@
+{
+  "event": "SessionStart",
+  "command": "cat << 'EOF'\nWorking on Obsidian plugin development.\nReference docs: https://docs.obsidian.md\nEOF"
+}

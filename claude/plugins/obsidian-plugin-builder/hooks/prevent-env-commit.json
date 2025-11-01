@@ -1,0 +1,6 @@
+{
+  "event": "PreToolUse",
+  "tool": "Bash",
+  "pattern": "*git add*",
+  "command": "bash -c 'if echo \"$TOOL_INPUT\" | grep -q \"\\.env\"; then echo \"Blocked: .env files should not be committed\" && exit 1; fi'"
+}

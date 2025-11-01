@@ -1,0 +1,6 @@
+{
+  "event": "PostToolUse",
+  "tool": "Edit",
+  "pattern": "**/*.{ts,tsx}",
+  "command": "bash -c 'cd \"$(dirname \"$FILE_PATH\")\" && while [ ! -f tsconfig.json ] && [ \"$(pwd)\" != \"/\" ]; do cd ..; done; if [ -f tsconfig.json ]; then npx tsc --noEmit 2>&1 || echo \"Type errors detected\"; fi'"
+}

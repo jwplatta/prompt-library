@@ -1,0 +1,6 @@
+{
+  "event": "PostToolUse",
+  "tool": "Write",
+  "pattern": "**/manifest.json",
+  "command": "bash -c 'jq -e \".id and .name and .version and .description and .author\" \"$FILE_PATH\" > /dev/null && echo \"manifest.json validated\" || (echo \"Error: manifest.json missing required fields\" && exit 1)'"
+}

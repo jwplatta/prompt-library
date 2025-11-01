@@ -1,0 +1,6 @@
+{
+  "event": "PreToolUse",
+  "tool": "Bash",
+  "pattern": "*git tag v*",
+  "command": "bash -c 'VERSION=$(echo \"$TOOL_INPUT\" | grep -oP \"v\\K[0-9.]+\" || echo \"\"); if [ -n \"$VERSION\" ] && [ -f manifest.json ] && [ -f package.json ]; then jq --arg v \"$VERSION\" \".version = \\$v\" manifest.json > manifest.json.tmp && mv manifest.json.tmp manifest.json && jq --arg v \"$VERSION\" \".version = \\$v\" package.json > package.json.tmp && mv package.json.tmp package.json && echo \"Synced version $VERSION to manifest.json and package.json\"; fi'"
+}

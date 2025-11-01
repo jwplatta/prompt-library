@@ -1,0 +1,6 @@
+{
+  "event": "PostToolUse",
+  "tool": "Write",
+  "pattern": "**/*.{ts,tsx}",
+  "command": "npx prettier --write \"$FILE_PATH\" 2>&1"
+}
