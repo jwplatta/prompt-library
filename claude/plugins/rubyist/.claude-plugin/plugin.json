@@ -1,17 +1,12 @@
 {
   "name": "rubyist",
-  "version": "1.0.0",
   "description": "Ruby development plugin with POODR principles, Sandi Metz refactoring patterns, and Ruby best practices",
-  "author": "Joseph Platta",
+  "version": "1.0.0",
+  "author": {
+    "name": "Joseph Platta"
+  },
+  "homepage": "https://github.com/jwplatta/prompt-library",
   "repository": "https://github.com/jwplatta/prompt-library",
   "license": "MIT",
-  "capabilities": {
-    "agents": true,
-    "skills": true,
-    "commands": true,
-    "hooks": true
-  },
-  "requirements": {
-    "claudeCode": ">=1.0.0"
-  }
+  "keywords": ["ruby", "development", "poodr", "sandi-metz", "best-practices"]
 }
