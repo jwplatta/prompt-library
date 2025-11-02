@@ -1,0 +1,35 @@
+{
+  "hooks": [
+    {
+      "name": "ruby-pre-commit",
+      "description": "Run RuboCop on staged Ruby files before commit",
+      "event": "pre-commit",
+      "command": "git diff --cached --name-only --diff-filter=ACM | grep '\\.rb$' | xargs -r bundle exec rubocop --force-exclusion",
+      "continueOnError": false,
+      "enabled": true
+    },
+    {
+      "name": "ruby-post-write",
+      "description": "Suggest tests for newly created Ruby files",
+      "event": "post-write",
+      "pattern": "**/*.rb",
+      "excludePattern": "**/*_spec.rb",
+      "action": "suggest-tests"
+    },
+    {
+      "name": "code-smell-logger",
+      "description": "Log detected code smells after file writes to aid refactoring tracking",
+      "event": "post-write",
+      "pattern": "**/*.rb",
+      "action": "analyze-and-log-smells"
+    },
+    {
+      "name": "ruby-test-on-save",
+      "description": "Run related tests when Ruby files are saved",
+      "event": "post-write",
+      "pattern": "lib/**/*.rb",
+      "action": "run-related-tests",
+      "enabled": false
+    }
+  ]
+}

@@ -18,6 +18,11 @@
       "name": "obsidian-plugin-builder",
       "source": "./claude/plugins/obsidian-plugin-builder",
       "description": "Plugin for building Obsidian plugins"
+    },
+    {
+      "name": "rubyist",
+      "source": "./claude/plugins/rubyist",
+      "description": "Plugin for programming in Ruby the way I like to"
     }
   ]
 }
