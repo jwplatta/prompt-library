@@ -1,6 +1,6 @@
 # Prompt Library
 
-A comprehensive collection of prompts, instructions, and configurations for working with LLM coding tools including GitHub Copilot, Claude Code, and other AI-assisted development environments.
+My personal collection of prompts, instructions, and configurations for working with LLM coding tools including GitHub Copilot and Claude Code.
 
 ## Overview
 
