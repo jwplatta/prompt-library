@@ -1,0 +1,24 @@
+{
+  "hooks": {
+    "before-write": {
+      "enabled": false,
+      "command": "uv run ruff format {file_path}",
+      "description": "Auto-format Python files with ruff before writing"
+    },
+    "after-write": {
+      "enabled": false,
+      "command": "uv run ruff check --fix {file_path}",
+      "description": "Auto-fix linting issues after writing Python files"
+    },
+    "before-commit": {
+      "enabled": false,
+      "command": "uv run ruff check . && uv run mypy src && uv run pytest",
+      "description": "Run quality checks before git commits"
+    },
+    "test-on-save": {
+      "enabled": false,
+      "command": "uv run pytest tests/test_{file_name}",
+      "description": "Run related tests when saving Python files"
+    }
+  }
+}

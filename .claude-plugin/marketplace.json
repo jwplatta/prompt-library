@@ -23,6 +23,11 @@
       "name": "rubyist",
       "source": "./claude/plugins/rubyist",
       "description": "Plugin for programming in Ruby the way I like to"
+    },
+    {
+      "name": "pythonic",
+      "source": "./claude/plugins/pythonic",
+      "description": "Plugin for programming in Python the way I like to"
     }
   ]
 }

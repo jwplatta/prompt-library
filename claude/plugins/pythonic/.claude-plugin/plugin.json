@@ -1,0 +1,12 @@
+{
+  "name": "pythonic",
+  "description": "Python project setup and development workflows following modern best practices with uv, ruff, pytest, and FastAPI",
+  "version": "1.0.0",
+  "author": {
+    "name": "Joseph Platta"
+  },
+  "homepage": "https://github.com/jwplatta/prompt-library",
+  "repository": "https://github.com/jwplatta/prompt-library",
+  "license": "MIT",
+  "keywords": ["python", "development"]
+}
